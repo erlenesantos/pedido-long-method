@@ -1,6 +1,10 @@
 package br.com.exemplo.pedidos;
 
+import java.util.logging.Logger;
+
 public class PedidoService {
+
+    private static final Logger LOG = Logger.getLogger(PedidoService.class.getName());
 
     private static final double LIMITE_DESCONTO_CLIENTE_VIP = 500.00;
     private static final double LIMITE_ANALISE_FINANCEIRA = 6000.00;
@@ -261,6 +265,6 @@ public class PedidoService {
 
         ResultadoPedido resultado = service.processarPedido(pedido);
 
-        System.out.println(resultado);
+        LOG.info(resultado.toString());
     }
 }
