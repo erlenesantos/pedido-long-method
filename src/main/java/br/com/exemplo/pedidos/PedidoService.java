@@ -265,6 +265,6 @@ public class PedidoService {
 
         ResultadoPedido resultado = service.processarPedido(pedido);
 
-        LOG.info(resultado.toString());
+        LOG.info(() -> resultado.toString());
     }
 }
